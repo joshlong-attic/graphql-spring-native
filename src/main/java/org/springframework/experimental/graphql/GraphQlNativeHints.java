@@ -105,7 +105,6 @@ import static org.springframework.nativex.hint.TypeAccess.*;
 		UnionTypeExtensionDefinition.class,
 		VariableDefinition.class,
 		VariableReference.class,
-		// new
 	}, //
 	access = {//
 		PUBLIC_CLASSES, PUBLIC_CONSTRUCTORS, PUBLIC_FIELDS, PUBLIC_METHODS,
