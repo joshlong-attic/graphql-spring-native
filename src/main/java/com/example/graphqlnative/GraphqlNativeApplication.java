@@ -132,6 +132,11 @@ public class GraphqlNativeApplication {
 	@Bean
 	GraphQlSourceBuilderCustomizer graphQlSourceBuilderCustomizer() {
 		return builder -> {
+			// this part isn't great, but:
+			// right now the PatternResourceResolver used to 'find' the schema files on the classpath fails because
+			// in the graalvm native image world there is NO classpath to speak of. So this code manually
+			// adds a Resource, knowing that the default resolution logic fail. But, it only does so in
+			// a GraalVM native image context
 			if (NativeDetector.inNativeImage())
 				builder.schemaResources(new ClassPathResource("graphql/schema.graphqls"));
 		};
