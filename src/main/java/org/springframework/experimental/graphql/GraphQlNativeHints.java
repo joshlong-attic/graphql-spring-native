@@ -19,6 +19,11 @@ import java.util.List;
 
 import static org.springframework.nativex.hint.TypeAccess.*;
 
+/**
+	* Provides Spring Native hints to support using Spring GraphQL in a Spring Native application.
+	*
+	* @author <a href="mailto:josh@joshlong.com">Josh Long</a>
+	*/
 @TypeHint(
 	typeNames = {
 		"graphql.analysis.QueryTraversalContext",
